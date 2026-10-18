@@ -30,8 +30,8 @@ The local server is already running in the background:
 - **URL**: [http://localhost:8080](http://localhost:8080)
 
 ### Direct Execution:
-You can also run it without any server by double-clicking:
-- **`index.html`** at `C:\Users\DEV KUMAR TIWARI\.gemini\antigravity\scratch\entrepreneur-showcase\index.html`
+You can run it without any server by simply double-clicking:
+- **`index.html`** in the project folder.
 
 ---
 
