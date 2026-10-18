@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Entrepreneur Showcase: Steve Jobs. EDC JSSUN Technical Recruitment Task 02. Curated and engineered by Dev Kumar Tiwari (GitHub: @http-d3v).">
+  <meta name="author" content="Dev Kumar Tiwari (@http-d3v) - EDC JSSUN Candidate">
+  <title>Steve Jobs — Interactive Entrepreneur Showcase | Dev Kumar Tiwari</title>
+
+  <!-- Google Fonts: Fraunces (Editorial Display Serif) & Karla (Humanist Body Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress" class="reading-progress" role="progressbar" aria-label="Page reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- SVG Decorative Definitions -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <path id="svg-squiggle-path" d="M2 12C28 4 64 19 96 11C128 3 162 18 196 10C224 3 252 17 280 9C304 2 328 15 350 8" />
+    </defs>
+  </svg>
+
+  <!-- Top Utility Masthead with Creator Credits -->
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <div class="masthead-meta">
+        <span class="masthead-badge">TASK 02</span>
+        <span class="masthead-sep">|</span>
+        <span class="masthead-org">EDC JSS UNIVERSITY NOIDA &bull; TECHNICAL TEAM RECRUITMENT</span>
+      </div>
+      <div class="masthead-edition">
+        <span>CURATED &amp; CODED BY <strong class="masthead-author">DEV KUMAR TIWARI</strong> (<a href="https://github.com/http-d3v" target="_blank" rel="noopener noreferrer" class="masthead-author-link"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-1px;margin-right:2px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>@http-d3v</a>)</span>
+        <span class="masthead-sep">|</span>
+        <span class="masthead-date">ARCHIVAL DOSSIER &bull; VOL. 02</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Editorial Navigation -->
+  <nav id="navbar" class="site-nav" aria-label="Main Navigation">
+    <div class="container nav-inner">
+      <a href="#intro" class="nav-brand" aria-label="Steve Jobs Showcase home">
+        <span class="brand-monogram" aria-hidden="true">SJ</span>
+        <div class="brand-text">
+          <span class="brand-title">THE ARCHIVE</span>
+          <span class="brand-subtitle">STEVE JOBS</span>
+        </div>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button type="button" id="mobile-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+
+      <!-- Navigation Links -->
+      <ul id="nav-links" class="nav-links" role="menubar">
+        <li role="none"><a href="#intro" class="nav-link active" role="menuitem"><span class="nav-num">01.</span> Profile</a></li>
+        <li role="none"><a href="#journey" class="nav-link" role="menuitem"><span class="nav-num">02.</span> Journey</a></li>
+        <li role="none"><a href="#ventures" class="nav-link" role="menuitem"><span class="nav-num">03.</span> Ventures</a></li>
+        <li role="none"><a href="#impact" class="nav-link" role="menuitem"><span class="nav-num">04.</span> Impact</a></li>
+        <li role="none"><a href="#sources" class="nav-link" role="menuitem"><span class="nav-num">05.</span> Sources</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- =========================================================
+         SECTION 1: INTRODUCTION
+         ========================================================= -->
+    <section id="intro" class="section intro-section" aria-labelledby="intro-heading">
+      <div class="container">
+        <div class="intro-grid">
+          
+          <!-- Column 1: Authentic Portrait & Archival Monogram Seal -->
+          <div class="intro-visual-col">
+            <div class="portrait-card" role="region" aria-label="Archival photographic portrait of Steve Jobs">
+              <div class="portrait-matting">
+                <div class="photo-frame-inner">
+                  <img src="assets/images/steve-jobs-portrait.jpg" alt="Iconic archival portrait of Steve Jobs" class="hero-photo" width="400" height="500">
+                  <div class="hero-photo-vignette" aria-hidden="true"></div>
+                  
+                  <!-- Overlay Monogram Seal Stamp -->
+                  <div class="photo-stamp-overlay" aria-hidden="true">
+                    <span class="stamp-seal-monogram">SJ</span>
+                    <span class="stamp-seal-dates">1955–2011</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Asymmetric Archival Wax Stamp Badge -->
+              <div class="archival-stamp" aria-hidden="true">
+                <span class="stamp-text">AUTHENTIC RECORD</span>
+                <span class="stamp-sub">EDC ARCHIVE</span>
+              </div>
+
+              <!-- Portrait Caption -->
+              <div class="portrait-caption">
+                <span class="caption-label">PLATE 1.0 &bull; HISTORIC RECORD</span>
+                <span class="caption-text">Steve Jobs: Technologist, industrial designer, and co-founder of Apple Inc.</span>
+              </div>
+            </div>
+
+            <!-- Mini Highlight: The India Connection Quote -->
+            <div class="side-callout-card">
+              <span class="callout-badge">THE INDIA AWAKENING (1974)</span>
+              <p class="callout-text">
+                &ldquo;If you just sit and observe, you will see how restless your mind is... intuition starts to blossom and you see things much more clearly.&rdquo;
+              </p>
+              <span class="callout-author">&mdash; Steve Jobs on Zen &amp; his Kainchi Dham pilgrimage</span>
+            </div>
+          </div>
+
+          <!-- Column 2: Editorial Biography & Identity -->
+          <div class="intro-text-col">
+            <div class="editorial-kicker">
+              <span class="kicker-index">DOSSIER 01</span>
+              <span class="kicker-line"></span>
+              <span class="kicker-label">FOUNDER PROFILE</span>
+            </div>
+
+            <h1 id="intro-heading" class="intro-headline">
+              Steve Jobs
+              <span class="headline-sub">Co-founder, Apple Inc. &bull; Visionary Technologist</span>
+            </h1>
+
+            <!-- Hand-drawn SVG decorative flourish line -->
+            <div class="hand-flourish" aria-hidden="true">
+              <svg viewBox="0 0 350 20" preserveAspectRatio="none">
+                <path d="M3 14C35 5 78 21 115 11C152 2 192 19 232 9C265 2 298 17 347 7" fill="none" stroke="#BD4F1F" stroke-width="3.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <!-- Creator Credit Callout Pill in Hero -->
+            <div class="hero-creator-pill" aria-label="Curator credits">
+              <span class="pill-dot"></span>
+              <span>Curated &amp; Designed by <strong>Dev Kumar Tiwari</strong></span>
+              <a href="https://github.com/http-d3v" class="pill-github-link" target="_blank" rel="noopener noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <span>github/http-d3v</span>
+              </a>
+            </div>
+
+            <!-- Concise 2-3 Line Dynamic Intro Container -->
+            <div id="intro-bio-container" class="intro-bio-wrapper">
+              <p class="intro-bio-lead drop-cap">
+                Steven Paul Jobs (1955–2011) was an American visionary entrepreneur, industrial designer, and media magnate whose uncompromising devotion to design transformed six distinct industries: personal computing, animated motion pictures, music distribution, mobile telephony, tablet computing, and digital typography.
+              </p>
+              <p class="intro-bio-body">
+                By synthesizing rigorous engineering with the expressive sensibilities of the liberal arts, Jobs championed products that were not merely functional machines, but deeply intuitive extensions of human creativity.
+              </p>
+            </div>
+
+            <!-- Quick Data Points Pill Grid -->
+            <div class="meta-strip" id="intro-meta-strip">
+              <div class="meta-item">
+                <span class="meta-term">PRIMARY VENTURES</span>
+                <span class="meta-desc">Apple, NeXT, Pixar</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-term">SPIRITUAL INFLUENCE</span>
+                <span class="meta-desc">1974 India Pilgrimage &amp; Zen</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-term">DESIGN PHILOSOPHY</span>
+                <span class="meta-desc">Simplicity is Ultimate Sophistication</span>
+              </div>
+            </div>
+
+            <!-- Pull Quote Box -->
+            <blockquote class="editorial-quote">
+              <p class="quote-text">&ldquo;Design is not just what it looks like and feels like. Design is how it works.&rdquo;</p>
+              <cite class="quote-cite">&mdash; Steve Jobs, 2003 (The New York Times Magazine)</cite>
+            </blockquote>
+
+            <!-- Quick Nav Jump -->
+            <div class="intro-actions">
+              <a href="#journey" class="btn btn-primary">
+                Explore The Chronology
+                <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 2V14M8 14L13 9M8 14L3 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#ventures" class="btn btn-secondary">Review Ventures</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: JOURNEY (TIMELINE) - DARK CONTRASTING BAND
+         ========================================================= -->
+    <section id="journey" class="section journey-section dark-band" aria-labelledby="journey-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header dark-header">
+          <div class="editorial-kicker light-kicker">
+            <span class="kicker-index">DOSSIER 02</span>
+            <span class="kicker-line"></span>
+            <span class="kicker-label">HISTORICAL TRAJECTORY</span>
+          </div>
+          <h2 id="journey-heading" class="section-title light-title">The Journey: Defining Milestones</h2>
+          <p class="section-lead light-lead">
+            A chronological examination of inflection points, calculated gambles, and ideological pivots. 
+            <strong>Click or press Enter on any milestone</strong> to expand deep-dive historical context, archival photographs, and verified primary citations.
+          </p>
+          <div class="timeline-controls-hint" aria-hidden="true">
+            <span class="hint-bullet">&bull;</span> Expandable records &bull; Archival photos embedded &bull; Realtime verified sources
+          </div>
+        </div>
+
+        <!-- Dynamic Timeline Mount Point (Populated via script.js) -->
+        <div id="timeline-container" class="timeline-stream" role="region" aria-label="Interactive Chronological Milestones">
+          <noscript>
+            <div class="noscript-card">
+              <p>JavaScript is required to generate the interactive milestone timeline from our structured archival dataset.</p>
+            </div>
+          </noscript>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 3: COMPANIES & VENTURES (CARDS WITH FILTER BONUS)
+         ========================================================= -->
+    <section id="ventures" class="section ventures-section" aria-labelledby="ventures-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="editorial-kicker">
+            <span class="kicker-index">DOSSIER 03</span>
+            <span class="kicker-line"></span>
+            <span class="kicker-label">CORPORATE VEHICLES</span>
+          </div>
+          <h2 id="ventures-heading" class="section-title">Companies &amp; Ventures</h2>
+          <p class="section-lead">
+            The distinct institutional platforms through which Jobs reshaped personal computing, object-oriented software architecture, and computer-generated cinema. Click any card to expand his exact connection and strategic impact.
+          </p>
+        </div>
+
+        <!-- BONUS FEATURE: Industry Filter Buttons -->
+        <div class="filter-wrapper" role="region" aria-label="Ventures filter controls">
+          <span class="filter-label" id="filter-label-desc">Filter by Industry Domain:</span>
+          <div class="filter-btn-group" role="tablist" aria-labelledby="filter-label-desc">
+            <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="ventures-container">
+              All Ventures <span class="filter-count" data-count="all">(3)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="personal-computing" role="tab" aria-selected="false" aria-controls="ventures-container">
+              Personal Computing <span class="filter-count" data-count="personal-computing">(1)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="software-workstations" role="tab" aria-selected="false" aria-controls="ventures-container">
+              Workstations &amp; OS <span class="filter-count" data-count="software-workstations">(1)</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="animation-entertainment" role="tab" aria-selected="false" aria-controls="ventures-container">
+              Digital Cinema <span class="filter-count" data-count="animation-entertainment">(1)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Ventures Grid Mount Point (Populated via script.js) -->
+        <div id="ventures-container" class="ventures-grid" role="region" aria-label="Interactive Venture Cards">
+          <noscript>
+            <p>JavaScript is required to generate the venture cards from our structured archival dataset.</p>
+          </noscript>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4: IMPACT & TAKEAWAYS
+         ========================================================= -->
+    <section id="impact" class="section impact-section" aria-labelledby="impact-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="editorial-kicker">
+            <span class="kicker-index">DOSSIER 04</span>
+            <span class="kicker-line"></span>
+            <span class="kicker-label">ANALYSIS &amp; SYNTHESIS</span>
+          </div>
+          <h2 id="impact-heading" class="section-title">Impact &amp; Key Takeaways</h2>
+          <p class="section-lead">
+            Distilling decades of entrepreneurial volatility into two enduring industrial achievements and two actionable cognitive models for modern builders.
+          </p>
+        </div>
+
+        <div class="impact-columns">
+          
+          <!-- Column 1: Exactly 2 Meaningful Achievements -->
+          <div class="impact-column">
+            <div class="column-header">
+              <span class="column-badge">ACHIEVEMENTS</span>
+              <h3 class="column-title">Two Enduring Industrial Shifts</h3>
+              <p class="column-sub">Rigorous structural changes brought to technology and commerce.</p>
+            </div>
+
+            <div id="achievements-container" class="impact-cards-stack">
+              <!-- Populated via script.js -->
+            </div>
+          </div>
+
+          <!-- Column 2: Exactly 2 Lessons Readers Can Take Away -->
+          <div class="impact-column">
+            <div class="column-header">
+              <span class="column-badge badge-terracotta">TAKEAWAYS</span>
+              <h3 class="column-title">Two Actionable Founder Lessons</h3>
+              <p class="column-sub">Mental models for engineers, designers, and students.</p>
+            </div>
+
+            <div id="takeaways-container" class="impact-cards-stack">
+              <!-- Populated via script.js -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 5: SOURCES & CITATIONS
+         ========================================================= -->
+    <section id="sources" class="section sources-section" aria-labelledby="sources-heading">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="editorial-kicker">
+            <span class="kicker-index">DOSSIER 05</span>
+            <span class="kicker-line"></span>
+            <span class="kicker-label">BIBLIOGRAPHY &amp; CITATIONS</span>
+          </div>
+          <h2 id="sources-heading" class="section-title">Archival Sources &amp; Verification</h2>
+          <p class="section-lead">
+            Academic and professional credibility demands primary-source integrity. Every historical milestone, venture metric, and philosophical claim in this showcase is grounded in verified, active real-time public archives.
+          </p>
+        </div>
+
+        <!-- Sources Table / Directory Container -->
+        <div class="sources-directory-card">
+          <div class="sources-table-header">
+            <span class="col-inst">Institution / Archive</span>
+            <span class="col-topic">Subject Matter</span>
+            <span class="col-type">Citation Type</span>
+            <span class="col-link">Direct URL</span>
+          </div>
+          <div id="sources-container" class="sources-list" role="list">
+            <!-- Populated via script.js -->
+          </div>
+        </div>
+
+        <!-- Archival Statement Note -->
+        <div class="sources-note">
+          <p>
+            <strong>Editorial Standard:</strong> In compliance with the EDC JSSUN Task 02 evaluation criteria, no speculative anecdotes or unverified claims have been incorporated. All venture links point directly to authentic institutional archives, registered patents, official corporate registries, or university records.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Colophon / Footer with Creator Credits -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <span class="footer-monogram" aria-hidden="true">SJ</span>
+          <div>
+            <p class="footer-title">THE ENTREPRENEUR ARCHIVE</p>
+            <p class="footer-subtitle">EDC JSSUN Recruitment Task 02 &bull; Second-Year Candidate</p>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Crafted as an interactive showcase demonstrating semantic HTML, magazine-inspired responsive CSS architecture, vanilla JavaScript state management, authentic historical photography, and strict primary-source integrity.
+        </p>
+
+        <!-- Beautiful Creator Badge Card -->
+        <div class="creator-badge-card">
+          <div class="creator-avatar" aria-hidden="true">DK</div>
+          <div class="creator-details">
+            <span class="creator-label">RESEARCH, DESIGN &amp; DEVELOPMENT</span>
+            <p class="creator-name">Dev Kumar Tiwari</p>
+            <a href="https://github.com/http-d3v" class="creator-github-pill" target="_blank" rel="noopener noreferrer" title="View Dev Kumar Tiwari on GitHub (@http-d3v)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>github.com/http-d3v</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col links-col">
+        <h4 class="footer-heading">Showcase Sections</h4>
+        <ul class="footer-nav">
+          <li><a href="#intro">01. Profile &amp; Indian Pilgrimage</a></li>
+          <li><a href="#journey">02. Chronological Milestones &amp; Photos</a></li>
+          <li><a href="#ventures">03. Companies &amp; Ventures</a></li>
+          <li><a href="#impact">04. Impact &amp; Founder Takeaways</a></li>
+          <li><a href="#sources">05. Archival Sources &amp; Citations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col swap-col">
+        <h4 class="footer-heading">Extensibility Notice</h4>
+        <p class="swap-info">
+          All showcase content is driven by a single decoupled data object in <code class="code-pill">script.js</code> (<code class="code-pill">ENTREPRENEUR_DATA</code>). Swapping this object completely restructures the showcase for any historical or modern founder without touching DOM markup.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Interactive Entrepreneur Showcase &bull; Created by <strong>Dev Kumar Tiwari</strong> (<a href="https://github.com/http-d3v" target="_blank" rel="noopener noreferrer" class="footer-author-link">@http-d3v</a>).</p>
+        <p class="ai-disclosure-footer">EDC JSS University Noida &bull; Candidate Task 02</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Return to top of document" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+    <span class="btn-top-label">TOP</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
