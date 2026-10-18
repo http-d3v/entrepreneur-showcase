@@ -2,6 +2,9 @@
 ### EDC JSSUN (JSS University Noida) | Technical Team Recruitment — Task 02
 **Curated, Designed & Engineered by Dev Kumar Tiwari** ([@http-d3v](https://github.com/http-d3v))
 
+- **Live Production URL:** [https://entrepreneur-showcase.vercel.app](https://entrepreneur-showcase.vercel.app)
+- **GitHub Repository:** [https://github.com/http-d3v/entrepreneur-showcase](https://github.com/http-d3v/entrepreneur-showcase)
+
 ---
 
 ## 1. Project Overview
