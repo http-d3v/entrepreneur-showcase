@@ -1,0 +1,5 @@
+.vercel
+*.zip
+*.log
+scratch/
+__pycache__/

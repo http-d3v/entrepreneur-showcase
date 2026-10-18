@@ -157,7 +157,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   5. MASTHEAD & CREATOR BYLINE
+   5. MASTHEAD & EDC BRANDING
    -------------------------------------------------------------------------- */
 .masthead {
   background-color: var(--text-ink);
@@ -177,6 +177,21 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.masthead-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.masthead-edc-logo {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: brightness(1.1);
 }
 
 .masthead-badge {
@@ -272,6 +287,24 @@ body {
   font-weight: 700;
   letter-spacing: 0.12em;
   color: var(--terracotta);
+}
+
+.nav-edc-badge {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.nav-edc-logo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-edc-logo:hover {
+  opacity: 1;
 }
 
 .nav-links {
@@ -458,7 +491,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   8. SECTION 1: INTRODUCTION & HERO (PORTRAIT + CREATOR BADGES)
+   8. SECTION 1: INTRODUCTION & HERO
    -------------------------------------------------------------------------- */
 .intro-section {
   padding-top: clamp(2.5rem, 5vw, 4.5rem);
@@ -650,7 +683,6 @@ body {
   color: var(--terracotta);
 }
 
-/* Hero Creator Credit Pill */
 .hero-creator-pill {
   display: inline-flex;
   align-items: center;
@@ -691,7 +723,6 @@ body {
   color: #FFF;
 }
 
-/* Column 2: Editorial Typography */
 .intro-text-col {
   display: flex;
   flex-direction: column;
@@ -826,7 +857,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   9. SECTION 2: JOURNEY (CONTRASTING DARK BAND + PHOTO GALLERIES)
+   9. SECTION 2: JOURNEY (DARK BAND + TIMELINE EDC BADGE)
    -------------------------------------------------------------------------- */
 .dark-band {
   background-color: var(--forest-deep);
@@ -841,6 +872,22 @@ body {
 .dark-header {
   border-bottom: 1px solid var(--forest-border);
   padding-bottom: 2rem;
+}
+
+.dark-header-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-edc-badge-img {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
 }
 
 .light-kicker {
@@ -1674,7 +1721,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   13. FOOTER & BEAUTIFUL CREATOR PROFILE CARD
+   13. FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
   background-color: var(--text-ink);
@@ -1698,33 +1745,11 @@ body {
   margin-bottom: 1rem;
 }
 
-.footer-monogram {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: var(--forest-band);
-  color: var(--ochre-gold);
-  border: 1.5px solid var(--ochre-gold);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.footer-title {
-  font-family: var(--font-serif);
-  font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: 0.05em;
-  color: #FFF;
-}
-
-.footer-subtitle {
-  font-size: 0.75rem;
-  color: var(--ochre-gold);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+.footer-edc-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
 }
 
 .footer-desc {
@@ -1734,7 +1759,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Creator Profile Card in Footer */
 .creator-badge-card {
   display: flex;
   align-items: center;
@@ -1961,6 +1985,10 @@ body {
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
+  }
+
+  .nav-edc-badge {
+    display: none;
   }
 
   .nav-links {
